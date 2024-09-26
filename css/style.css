@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+
+:root {
+    --color-50: #F6F5FA;
+    --color-100: #ECEBF3;
+    --color-200: #D3D2E5;
+    --color-300: #ABABCE;
+    --color-400: #7E7EB2;
+    --color-500: #5E5E99;
+    --color-600: #4C447F;
+    --color-700: #3F3D67;
+    --color-800: #373557;
+    --color-900: #100f1842;
+    --color-950: #13121C;
+}
+
+* {
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(.43,1.1,.62,1.08);
+    text-transform: capitalize;
+}
+
+/* Estilo global */
+body {
+    background-color: var(--color-50);
+    color: var(--color-900);
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Espaciado para compensar el header fijo */
+section {
+    padding-top: 80px;
+}
+
+
+
+/* Header */
+.header {
+    background-color: var(--color-900);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo i {
+    color: var(--color-100);
+    font-size: 24px;
+}
+
+.navbar a {
+    color: var(--color-100);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: var(--color-300);
+}
+
+
+/* Estilo para el botón */
+.btn {
+    display: inline-block;
+    background-color: var(--color-600); /* Color del botón */
+    color: white; /* Color del texto */
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none; /* Quitar el subrayado del enlace */
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover para el botón */
+.btn:hover {
+    background-color: var(--color-700); /* Color del botón al pasar el ratón */
+    transform: scale(1.05); /* Efecto de agrandar ligeramente el botón */
+}
+
+
+/* Sección Home */
+#home {
+    background-color: var(--color-50);
+    padding: 80px 20px;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Para dispositivos pequeños */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.home-text {
+    flex: 1;
+    max-width: 600px;
+    padding-right: 20px;
+}
+
+.home-text h1 {
+    color: var(--color-600);
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.home-text p {
+    font-size: 20px;
+    color: var(--color-400);
+    line-height: 1.6;
+}
+
+.home-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.home-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+/* Sección About */
+#about {
+    background-color: var(--color-200);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    color: var(--color-600);
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Contenedor flex para las columnas */
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Para dispositivos pequeños */
+    gap: 20px; /* Espacio entre las columnas */
+    padding: 20px 0;
+}
+
+/* Estilos para cada columna */
+.about-column {
+    background-color: var(--color-100);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1; /* Permite que las columnas se distribuyan uniformemente */
+    min-width: 300px; /* Ancho mínimo para dispositivos pequeños */
+    max-width: 400px; /* Ancho máximo */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-column h3 {
+    font-size: 28px;
+    color: var(--color-500);
+    margin-bottom: 20px;
+}
+
+.about-column p {
+    color: var(--color-400);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+
+
+/* Estilos para la sección de equipo */
+#team {
+    background-color: var(--color-100);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#team h2 {
+    color: var(--color-600);
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Contenedor del equipo */
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacio entre los miembros del equipo */
+    flex-wrap: wrap; /* Para que las columnas se ajusten en pantallas pequeñas */
+}
+
+/* Estilos para cada miembro del equipo */
+.team-member {
+    text-align: center;
+    max-width: 200px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Hacer las imágenes circulares */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.team-member h4 {
+    color: var(--color-500);
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.team-member p {
+    color: var(--color-400);
+    font-size: 16px;
+}
+
+.team-member img:hover {
+    transform: scale(1.1); /* Efecto de aumento cuando se pasa el ratón por encima */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+/* Sección Features */
+#features {
+    background-color: var(--color-50);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#features h2 {
+    font-size: 36px;
+    color: var(--color-600);
+    margin-bottom: 30px;
+}
+
+#features ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#features ul li {
+    background-color: var(--color-100);
+    color: var(--color-500);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    font-size: 18px;
+}
+
+#features ul li strong {
+    color: var(--color-600);
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+/* Estilos para la galería */
+
+/* Sección Gallery */
+#gallery {
+    background-color: var(--color-400);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#gallery h2 {
+    color: var(--color-100);
+    font-size: 36px;
+}
+
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre imágenes */
+    padding: 20px;
+}
+
+.gallery img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Aumento de la imagen */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Sección Contacto */
+.contact-section {
+    background-color: var(--color-50); /* Fondo claro */
+    border: 2px solid var(--color-200); /* Borde */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 40px 20px; /* Espaciado interior */
+    max-width: 500px; /* Ancho máximo del cuadro */
+    margin: 40px auto; /* Centrar la sección */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+    text-align: center; /* Centrar el texto */
+}
+
+.contact-section h2 {
+    font-size: 28px;
+    color: var(--color-600);
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    color: var(--color-400);
+    margin-bottom: 15px;
+}
+
+.contact-section a {
+    color: var(--color-600); /* Color de enlace */
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+}
+
+
+
+/* Footer */
+footer {
+    background-color: var(--color-900);
+    color: var(--color-100);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
